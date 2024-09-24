@@ -1,1 +1,4 @@
 node_modules/
+**/ios/Pods
+**/build/
+**/ios/.xcode.env.local

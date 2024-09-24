@@ -88,3 +88,67 @@ const styles = StyleSheet.create({
 // Module name
 AppRegistry.registerComponent('Settings', () => Settings);
 ```
+
+## [Configure iOS dependencies]()
+
+Now, it's time to link the React Native dependencies to the iOS project.
+
+The tool we use to do that is [Cocoapods](https://cocoapods.org) and Ruby Gems.
+
+Follow the [install instructions](https://cocoapods.org/) in the Cocoapods website
+
+We use [Ruby Bundler](https://bundler.io/) to manage the ruby dependencies.
+
+1. Create a `Gemfile` at the same level of the `package.json` file with this content
+```ruby
+source 'https://rubygems.org'
+
+# You may use http://rbenv.org/ or https://rvm.io/ to install and use this version
+ruby ">= 2.6.10"
+
+# Exclude problematic versions of cocoapods and activesupport that causes build failures.
+gem 'cocoapods', '>= 1.13', '!= 1.15.0', '!= 1.15.1'
+gem 'activesupport', '>= 6.1.7.5', '!= 7.1.0'
+```
+2. Inside the iOS folder, create a `Podfile` file, with this content
+```ruby
+# Resolve react_native_pods.rb with node to allow for hoisting
+require Pod::Executable.execute_command('node', ['-p',
+  'require.resolve(
+    "react-native/scripts/react_native_pods.rb",
+    {paths: [process.argv[1]]},
+  )', __dir__]).strip
+
+platform :ios, min_ios_version_supported
+prepare_react_native_project!
+
+linkage = ENV['USE_FRAMEWORKS']
+if linkage != nil
+  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
+  use_frameworks! :linkage => linkage.to_sym
+end
+
+target 'MixedApp' do
+  config = use_native_modules!
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # An absolute path to your application root.
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
+  )
+
+  post_install do |installer|
+    # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
+    react_native_post_install(
+      installer,
+      config[:reactNativePath],
+      :mac_catalyst_enabled => false,
+      # :ccache_enabled => true
+    )
+  end
+end
+```
+3. Navigate inside the `ios` folder
+4. run the `bundle install` command
+5. run the `bundle exec pod install` command
+6. update the `.gitignore` file to ignore the `**/ios/Pods`, the `**/ios/generated` folder, and the `.xcode.env.local` file

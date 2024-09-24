@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4343995F5AE4010527999A25 /* libPods-MixedApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E726EA0C4D55632A26FABA1C /* libPods-MixedApp.a */; };
 		CDDADA072CA2DF330017FD35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA062CA2DF330017FD35 /* AppDelegate.swift */; };
 		CDDADA092CA2DF330017FD35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA082CA2DF330017FD35 /* SceneDelegate.swift */; };
 		CDDADA0B2CA2DF330017FD35 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA0A2CA2DF330017FD35 /* HomeViewController.swift */; };
@@ -14,9 +15,12 @@
 		CDDADA132CA2DF350017FD35 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CDDADA122CA2DF350017FD35 /* Base */; };
 		CDDADA1B2CA2E09D0017FD35 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA1A2CA2E09D0017FD35 /* TabViewController.swift */; };
 		CDDADA1D2CA2E0B50017FD35 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA1C2CA2E0B50017FD35 /* SettingsViewController.swift */; };
+		F21B664EC1960FF5372C8818 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E768F8C2ACA91BF54335D805 /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A71928A44E75280EA5253A42 /* Pods-MixedApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixedApp.release.xcconfig"; path = "Target Support Files/Pods-MixedApp/Pods-MixedApp.release.xcconfig"; sourceTree = "<group>"; };
+		B1A1415084B33C2EEEA1228A /* Pods-MixedApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixedApp.debug.xcconfig"; path = "Target Support Files/Pods-MixedApp/Pods-MixedApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CDDADA032CA2DF330017FD35 /* MixedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MixedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDADA062CA2DF330017FD35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDDADA082CA2DF330017FD35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		CDDADA142CA2DF350017FD35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDDADA1A2CA2E09D0017FD35 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		CDDADA1C2CA2E0B50017FD35 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E726EA0C4D55632A26FABA1C /* libPods-MixedApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MixedApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E768F8C2ACA91BF54335D805 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = ../PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4343995F5AE4010527999A25 /* libPods-MixedApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BEA5A84FFDF8D29208E2A62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1A1415084B33C2EEEA1228A /* Pods-MixedApp.debug.xcconfig */,
+				A71928A44E75280EA5253A42 /* Pods-MixedApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C0CC0A4547F7FC2B93A21CC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E726EA0C4D55632A26FABA1C /* libPods-MixedApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CDDAD9FA2CA2DF330017FD35 = {
 			isa = PBXGroup;
 			children = (
 				CDDADA052CA2DF330017FD35 /* MixedApp */,
 				CDDADA042CA2DF330017FD35 /* Products */,
+				5BEA5A84FFDF8D29208E2A62 /* Pods */,
+				C0CC0A4547F7FC2B93A21CC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +93,7 @@
 				CDDADA0F2CA2DF350017FD35 /* Assets.xcassets */,
 				CDDADA112CA2DF350017FD35 /* LaunchScreen.storyboard */,
 				CDDADA142CA2DF350017FD35 /* Info.plist */,
+				E768F8C2ACA91BF54335D805 /* PrivacyInfo.xcprivacy */,
 			);
 			path = MixedApp;
 			sourceTree = "<group>";
@@ -77,9 +105,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDDADA172CA2DF350017FD35 /* Build configuration list for PBXNativeTarget "MixedApp" */;
 			buildPhases = (
+				657C9078B9D13EAFB47CFE0A /* [CP] Check Pods Manifest.lock */,
 				CDDAD9FF2CA2DF330017FD35 /* Sources */,
 				CDDADA002CA2DF330017FD35 /* Frameworks */,
 				CDDADA012CA2DF330017FD35 /* Resources */,
+				90A9C06A852C8299891CCEB5 /* [CP] Embed Pods Frameworks */,
+				94B18CFAA2607D77EFC53DCC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,10 +161,70 @@
 			files = (
 				CDDADA102CA2DF350017FD35 /* Assets.xcassets in Resources */,
 				CDDADA132CA2DF350017FD35 /* Base in Resources */,
+				F21B664EC1960FF5372C8818 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		657C9078B9D13EAFB47CFE0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MixedApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90A9C06A852C8299891CCEB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MixedApp/Pods-MixedApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MixedApp/Pods-MixedApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MixedApp/Pods-MixedApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94B18CFAA2607D77EFC53DCC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MixedApp/Pods-MixedApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MixedApp/Pods-MixedApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MixedApp/Pods-MixedApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CDDAD9FF2CA2DF330017FD35 /* Sources */ = {
@@ -167,9 +258,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CC = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -196,6 +288,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CXX = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -215,13 +308,21 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD = "";
+				LDPLUSPLUS = "";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HERMES = true;
 			};
 			name = Debug;
 		};
@@ -230,9 +331,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CC = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -259,6 +361,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CXX = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -272,17 +375,26 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD = "";
+				LDPLUSPLUS = "";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		CDDADA182CA2DF350017FD35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1A1415084B33C2EEEA1228A /* Pods-MixedApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +422,7 @@
 		};
 		CDDADA192CA2DF350017FD35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A71928A44E75280EA5253A42 /* Pods-MixedApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
