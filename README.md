@@ -56,7 +56,7 @@ yarn add react@^18.2.0
 ```
 5. Add a `.gitignore` file to ignore the `node_modules` folder
 
-## [Create the index.js file]()
+## [Create the index.js file](https://github.com/cipolleschi/MixedApp/commit/82b09dc)
 
 The `index.js` file is the entry point for the JS module we want to load in our app.
 At the same level of the `package.json`
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
 AppRegistry.registerComponent('Settings', () => Settings);
 ```
 
-## [Configure iOS dependencies]()
+## [Configure iOS dependencies](https://github.com/cipolleschi/MixedApp/commit/102a09c)
 
 Now, it's time to link the React Native dependencies to the iOS project.
 
@@ -153,7 +153,7 @@ end
 5. run the `bundle exec pod install` command
 6. update the `.gitignore` file to ignore the `**/ios/Pods`, the `**/ios/generated` folder, and the `.xcode.env.local` file
 
-## [Modify the iOS code]()
+## [Modify the iOS code](https://github.com/cipolleschi/MixedApp/commit/34817ed)
 
 Now it's time to modify the iOS code to connect with React Native.
 
@@ -248,7 +248,7 @@ Now you can build and run your app, but you'll see an error like this one.
 
 The problem is that Metro is not running. The next step will fix this.
 
-## [Configure Metro]()
+## [Configure Metro](https://github.com/cipolleschi/MixedApp/commit/827ae28)
 
 Metro is the JS bundler that provides JS files to your app while you develop it.
 
@@ -282,7 +282,7 @@ If you now navigate to the Settings tab, you should see your JS being loaded.
 
 If you now modify the `index.js` file, you can update how it looks in your app, in real time!
 
-## [Pass data between Native and JS]()
+## [Pass data between Native and JS](https://github.com/cipolleschi/MixedApp/commit/a2e4755)
 
 To pass data between the native side and the JS side, you can use the `initialProperties` dictionary of the `SettingsViewController`.
 
