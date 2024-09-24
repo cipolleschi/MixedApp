@@ -23,7 +23,7 @@ First step to integrate React Native is to move your ios project into a dedicate
 1. create a new `ios` folder
 2. move the `MixedApp` folder inside the `ios` folder
 
-## [Create the package.json and install js dependencies]()
+## [Create the package.json and install js dependencies](https://github.com/cipolleschi/MixedApp/commit/q1ea52bc12728ed5a27fc90a915d1e3fba6520815)
 
 We now need to add the React and React Native dependencies to our project.
 
@@ -53,4 +53,38 @@ warning " > react-native@0.75.3" has unmet peer dependency "react@^18.2.0".
 so make sure to run also
 ```sh
 yarn add react@^18.2.0
+```
+5. Add a `.gitignore` file to ignore the `node_modules` folder
+
+## [Create the index.js file]()
+
+The `index.js` file is the entry point for the JS module we want to load in our app.
+At the same level of the `package.json`
+
+1. Create and `index.js` file
+2. Add the following content to the `index.js` file
+```js
+import React from 'react';
+import {AppRegistry, StyleSheet, Text, View} from 'react-native';
+
+const Settings = ({data}) => {
+  return (
+    <View style={styles.container}>
+      <Text>Settings</Text>
+      <Text>{data}</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#EEEEEE',
+  },
+});
+
+// Module name
+AppRegistry.registerComponent('Settings', () => Settings);
 ```
