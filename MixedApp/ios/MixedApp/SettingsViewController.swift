@@ -13,7 +13,7 @@ class SettingsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.view = (RCTSharedApplication()?.delegate as? RCTAppDelegate)?.rootViewFactory .view(withModuleName: "Settings", initialProperties: [:])
+    self.view = (RCTSharedApplication()?.delegate as? RCTAppDelegate)?.rootViewFactory .view(withModuleName: "Settings", initialProperties: ["data":"Hello from React Native"])
     
   }
 }

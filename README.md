@@ -281,3 +281,19 @@ module.exports = mergeConfig(getDefaultConfig(__dirname), config);
 If you now navigate to the Settings tab, you should see your JS being loaded.
 
 If you now modify the `index.js` file, you can update how it looks in your app, in real time!
+
+## [Pass data between Native and JS]()
+
+To pass data between the native side and the JS side, you can use the `initialProperties` dictionary of the `SettingsViewController`.
+
+1. Modify the `SettingsViewController.swift` as it follows:
+```diff
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+-    self.view = (RCTSharedApplication()?.delegate as? RCTAppDelegate)?.rootViewFactory .view(withModuleName: "Settings", initialProperties: [:])
++    self.view = (RCTSharedApplication()?.delegate as? RCTAppDelegate)?.rootViewFactory .view(withModuleName: "Settings", initialProperties: ["data":"Hello from React Native"])
+  }
+
+```
+2. Rebuild and rerun the app
