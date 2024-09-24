@@ -247,3 +247,37 @@ Now you can build and run your app, but you'll see an error like this one.
 
 
 The problem is that Metro is not running. The next step will fix this.
+
+## [Configure Metro]()
+
+Metro is the JS bundler that provides JS files to your app while you develop it.
+
+To configure it properly, follow these steps:
+
+1. From the same folder where the `package.json` is, run `yarn add --dev @react-native/metro-config`
+2. Create a new file `metro.config.js` with this content
+```js
+const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
+
+/**
+ * Metro configuration
+ * https://reactnative.dev/docs/metro
+ *
+ * @type {import('metro-config').MetroConfig}
+ */
+const config = {};
+
+module.exports = mergeConfig(getDefaultConfig(__dirname), config);
+```
+3. create a new file `.watchmanconfig` with this content:
+```json
+{}
+```
+4. Run `yarn start` to start metro.
+5. In another terminal, navigate to the `ios` folder
+6. Run `bundle exec pod install`. This is needed because the `yarn add @react-native/metro-config` changed the `node_modules` folder and native dependencies are out of sync.
+7. From Xcode, build and run your app.
+
+If you now navigate to the Settings tab, you should see your JS being loaded.
+
+If you now modify the `index.js` file, you can update how it looks in your app, in real time!
