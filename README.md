@@ -152,3 +152,98 @@ end
 4. run the `bundle install` command
 5. run the `bundle exec pod install` command
 6. update the `.gitignore` file to ignore the `**/ios/Pods`, the `**/ios/generated` folder, and the `.xcode.env.local` file
+
+## [Modify the iOS code]()
+
+Now it's time to modify the iOS code to connect with React Native.
+
+React Native is kickstarted by a class called `RCTAppDelegate`. As the name implies, React Native works with the `AppDelegate` hierarchy chain, and not with the `SceneDelegate` hierarchy.
+
+1. Open the project with the command `open ios/MixedApp.xcworkspace`
+2. Delete the `SceneDelegate.swift` file
+3. In Xcode, select your app icon and the Info tab.
+4. Delete the `Application Scene Manifest` line
+5. Open the `AppDelegate.swift` file and apply the following changes
+```diff
+import UIKit
++ import React
++ import React_RCTAppDelegate
+
+@main
+-class AppDelegate: UIResponder, UIApplicationDelegate {
++class AppDelegate: RCTAppDelegate {
+
+
+-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+-    // Override point for customization after application launch.
+-    return true
+-  }
++ override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
++    super.moduleName = "Settings"
++    self.initialProps = [:];
+
++    super.application(application, didFinishLaunchingWithOptions: launchOptions)
+
++    let rootViewController = TabViewController()
++    self.window.rootViewController = rootViewController
++    self.window.makeKeyAndVisible()
+
++    return true
++}
+
++  override func sourceURL(for bridge: RCTBridge) -> URL? {
++    return bundleURL()
++  }
+
++  override func bundleURL() -> URL?
++  {
++  #if DEBUG
++    return RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: "index")
++  #else
++    return NSBundle.main .url(forResource: "main", withExtension: "jsbundle")
++  #endif
++  }
+
+-  // MARK: UISceneSession Lifecycle
+
+-  func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+-    // Called when a new scene session is being created.
+-    // Use this method to select a configuration to create the new scene with.
+-    return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+-  }
+-
+-  func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+-    // Called when the user discards a scene session.
+-    // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
+-    // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+-  }
+}
+```
+6. Open the `SettingsViewController.swift` file and modify it as it follows
+```diff
+import Foundation
++import React
++import React_RCTAppDelegate
+
+class SettingsViewController: UIViewController {
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view.
+-    self.view.backgroundColor = .red
++    self.view = (RCTSharedApplication()?.delegate as? RCTAppDelegate)?.rootViewFactory .view(withModuleName: "Settings", initialProperties: [:])
+  }
+}
+```
+7. Select your app in Xcode.
+8. Select `Build Settings`
+9. in the top right corner, filter for `User Script Sandboxing`
+10. Set the value to `NO`.
+
+Now you can build and run your app, but you'll see an error like this one.
+
+
+<img height="480" alt="No bundle urls present" src="./assets/noBundle.png" />
+
+
+The problem is that Metro is not running. The next step will fix this.

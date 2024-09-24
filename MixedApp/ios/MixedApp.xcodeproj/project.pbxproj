@@ -9,12 +9,11 @@
 /* Begin PBXBuildFile section */
 		4343995F5AE4010527999A25 /* libPods-MixedApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E726EA0C4D55632A26FABA1C /* libPods-MixedApp.a */; };
 		CDDADA072CA2DF330017FD35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA062CA2DF330017FD35 /* AppDelegate.swift */; };
-		CDDADA092CA2DF330017FD35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA082CA2DF330017FD35 /* SceneDelegate.swift */; };
 		CDDADA0B2CA2DF330017FD35 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA0A2CA2DF330017FD35 /* HomeViewController.swift */; };
 		CDDADA102CA2DF350017FD35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDDADA0F2CA2DF350017FD35 /* Assets.xcassets */; };
 		CDDADA132CA2DF350017FD35 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CDDADA122CA2DF350017FD35 /* Base */; };
 		CDDADA1B2CA2E09D0017FD35 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA1A2CA2E09D0017FD35 /* TabViewController.swift */; };
-		CDDADA1D2CA2E0B50017FD35 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA1C2CA2E0B50017FD35 /* SettingsViewController.swift */; };
+		CDDADA1F2CA2EBA90017FD35 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDADA1E2CA2EBA90017FD35 /* SettingsViewController.swift */; };
 		F21B664EC1960FF5372C8818 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E768F8C2ACA91BF54335D805 /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
@@ -23,15 +22,14 @@
 		B1A1415084B33C2EEEA1228A /* Pods-MixedApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixedApp.debug.xcconfig"; path = "Target Support Files/Pods-MixedApp/Pods-MixedApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CDDADA032CA2DF330017FD35 /* MixedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MixedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDADA062CA2DF330017FD35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDDADA082CA2DF330017FD35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CDDADA0A2CA2DF330017FD35 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CDDADA0F2CA2DF350017FD35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDDADA122CA2DF350017FD35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDDADA142CA2DF350017FD35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDDADA1A2CA2E09D0017FD35 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
-		CDDADA1C2CA2E0B50017FD35 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CDDADA1E2CA2EBA90017FD35 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E726EA0C4D55632A26FABA1C /* libPods-MixedApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MixedApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E768F8C2ACA91BF54335D805 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = ../PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		E768F8C2ACA91BF54335D805 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = ../PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +50,6 @@
 				B1A1415084B33C2EEEA1228A /* Pods-MixedApp.debug.xcconfig */,
 				A71928A44E75280EA5253A42 /* Pods-MixedApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -87,13 +84,12 @@
 			children = (
 				CDDADA1A2CA2E09D0017FD35 /* TabViewController.swift */,
 				CDDADA062CA2DF330017FD35 /* AppDelegate.swift */,
-				CDDADA1C2CA2E0B50017FD35 /* SettingsViewController.swift */,
-				CDDADA082CA2DF330017FD35 /* SceneDelegate.swift */,
 				CDDADA0A2CA2DF330017FD35 /* HomeViewController.swift */,
 				CDDADA0F2CA2DF350017FD35 /* Assets.xcassets */,
 				CDDADA112CA2DF350017FD35 /* LaunchScreen.storyboard */,
 				CDDADA142CA2DF350017FD35 /* Info.plist */,
 				E768F8C2ACA91BF54335D805 /* PrivacyInfo.xcprivacy */,
+				CDDADA1E2CA2EBA90017FD35 /* SettingsViewController.swift */,
 			);
 			path = MixedApp;
 			sourceTree = "<group>";
@@ -234,8 +230,7 @@
 				CDDADA1B2CA2E09D0017FD35 /* TabViewController.swift in Sources */,
 				CDDADA0B2CA2DF330017FD35 /* HomeViewController.swift in Sources */,
 				CDDADA072CA2DF330017FD35 /* AppDelegate.swift in Sources */,
-				CDDADA1D2CA2E0B50017FD35 /* SettingsViewController.swift in Sources */,
-				CDDADA092CA2DF330017FD35 /* SceneDelegate.swift in Sources */,
+				CDDADA1F2CA2EBA90017FD35 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,10 +309,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -380,10 +372,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -401,6 +390,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C4V9EZM2B6;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MixedApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -429,6 +419,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C4V9EZM2B6;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MixedApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
